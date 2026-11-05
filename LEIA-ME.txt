@@ -1,0 +1,30 @@
+DRAGÃO GUERREIRO — ARQUIVOS PARA INSTALAÇÃO PWA
+
+Esta pasta é somente a parte GitHub Pages. Não substitui os arquivos do Google Apps Script.
+
+ARQUIVOS
+- index.html: página de abertura e botão para abrir o Web App.
+- manifest.json: configuração de instalação.
+- icon-192.png / icon-512.png: ícones convencionais (arte original preservada).
+- icon-192-maskable.png / icon-512-maskable.png: versões com fundo sólido e margem segura para ícones adaptáveis Android.
+- service-worker.js: cache somente da página estática do GitHub Pages.
+- .nojekyll: preservado.
+
+COMO PUBLICAR
+1. Abra o repositório GitHub: https://github.com/w4llolv/dragao-guerreiro
+2. Na branch main, substitua os arquivos da raiz pelos arquivos desta pasta.
+3. Confirme que GitHub Pages continua configurado para publicar a branch main a partir da raiz (/).
+4. Aguarde a publicação e abra https://w4llolv.github.io/dragao-guerreiro/ no Chrome do Android.
+5. No Chrome, use o menu ⋮ e escolha "Instalar app" ou "Adicionar à tela inicial" (o texto varia por versão).
+6. Após instalar, abra pelo novo ícone.
+
+IMPORTANTE SOBRE O ENDEREÇO DO APP
+O botão do index.html mantém o endereço do Apps Script que já estava no repositório:
+https://script.google.com/macros/s/AKfycby69WviyJNQkAk0VNfX0aYpaUztkWyzXKJGzyIpHwJcqh5rP5GMHqqa_PZM7gfonefX/exec
+Se você criou uma NOVA implantação do Web App (com outro URL), atualize o href do botão em index.html antes de publicar. Se apenas atualizou a implantação existente, o URL normalmente permanece igual.
+
+TESTE E CACHE
+- Se já havia instalado o PWA, remova o atalho/app antigo do celular antes do novo teste, para evitar ícone e manifesto antigos em cache.
+- Depois da publicação, abra a página no Chrome, atualize-a e instale novamente.
+- O service worker armazena somente a casca do GitHub Pages. O aplicativo do Google Apps Script continua exigindo internet.
+- Esta entrega não publica nada automaticamente e não altera seu repositório.

@@ -27,7 +27,7 @@
           href="./icon-512.png">
 
     <link rel="apple-touch-icon"
-          href="./icon-192.png">
+          href="./icon-192-maskable.png">
 
     <title>Dragão Guerreiro</title>
 
@@ -122,6 +122,17 @@
 
     </main>
 
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+                    .catch(function (error) {
+                        console.warn('Não foi possível registrar o service worker:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>
